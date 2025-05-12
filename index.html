@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nithya's Courses and Videos</title>
+    <link rel="icon" type="image/x-icon" href="icon.jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        header {
+            background-color: #6a0dad;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        h2 {
+            color: #6a0dad;
+        }
+        .course, .video {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: white;
+        }
+        footer {
+            background-color: #6a0dad;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        iframe {
+            width: 100%;
+            max-width: 400px;
+            height: 225px; /* 16:9 aspect ratio for 400px width */
+            display: block;
+            margin: 0 auto;
+        }
+        .course a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #6a0dad;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .course a:hover {
+            background-color: #4b0a99;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Nithya's Learning Hub</h1>
+    <p>Learn Frontend, Coding Tips, and More!</p>
+</header>
+
+<section>
+    <center>
+    <h2>📚 Courses</h2>
+    </center>
+
+    <template id="course-template">
+        <div class="course">
+            <h3 class="course-title"></h3>
+            <p class="course-description"></p>
+            <p><strong>Duration:</strong> <span class="course-duration"></span></p>
+            <a href="#" class="course-link" target="_blank">View Course</a>
+        </div>
+    </template>
+
+    <div id="courses-container"></div>
+</section>
+
+<section>
+    <center>
+    <h2>🎥 Videos</h2>
+    </center>
+    <div class="video">
+        <h3><b>HTML Basics</b></h3>
+        <iframe src="https://www.youtube.com/embed/qz0aGYrrlhU" allowfullscreen></iframe>
+    </div>
+
+    <div class="video">
+        <h3><i>CSS Tutorial</i></h3>
+        <iframe src="https://www.youtube.com/embed/yfoY53QXEnI" allowfullscreen></iframe>
+    </div>
+
+    <div class="video">
+        <h3>JavaScript Crash Course🧠💡</h3>
+        <iframe src="https://www.youtube.com/embed/7dSJubxFWv0?si=-QIyYOQ6LYEIevgo" allowfullscreen></iframe>
+    </div>
+</section>
+<center>
+<section>
+    <h2>📬 Contact</h2>
+    <p>Email me at: <a href="mailto:nithyasreep@gmail.com">nithyasreep@gmail.com</a></p>
+    <p>Follow me on <a href="https://www.instagram.com/nithinasee?igsh=ZXN2dTcyMHF6eTZ4" target="_blank">Instagram</a></p>
+</section>
+</center>
+
+<footer>
+    <p>© 2025 Nithya's Learning Hub | All rights reserved</p>
+</footer>
+
+<script>
+    const courses = [
+        {
+            title: "Frontend Web Development",
+            description: "Learn HTML, CSS, and JavaScript from scratch.",
+            duration: "4 weeks",
+            link: "https://www.freecodecamp.org/learn/responsive-web-design/"
+        },
+        {
+            title: "Java Programming",
+            description: "Understand object-oriented programming using Java.",
+            duration: "3 weeks",
+            link: "https://www.codecademy.com/learn/learn-java"
+        },
+        {
+            title: "Python for Beginners",
+            description: "Get started with Python for data and web development.",
+            duration: "2 weeks",
+            link: "https://www.learnpython.org/"
+        }
+    ];
+
+    const container = document.getElementById("courses-container");
+    const template = document.getElementById("course-template");
+
+    courses.forEach(course => {
+        const clone = template.content.cloneNode(true);
+        clone.querySelector(".course-title").textContent = course.title;
+        clone.querySelector(".course-description").textContent = course.description;
+        clone.querySelector(".course-duration").textContent = course.duration;
+        clone.querySelector(".course-link").href = course.link;
+        container.appendChild(clone);
+    });
+</script>
+
+</body>
+</html>
