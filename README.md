@@ -1,4 +1,4 @@
-🌐 Nithya's Learning Hub
+🌐 Nithya's Learning Hub:
 Nithya's Learning Hub is a personal learning showcase website built with HTML, CSS, and JavaScript. It highlights useful resources, including curated courses and embedded coding tutorial videos.
 
 🔍 Features
@@ -32,7 +32,7 @@ Visit Website <!-- Add live link if hosted -->
 📫 Contact
 Email: nithyasreep@gmail.com
 
-Instagram: @nithinasee
+Linkedin:https://www.linkedin.com/in/p-nithya-sri-b4b6302a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
 
 # chat
 https://inquisitive-cupcake-bff8b0.netlify.app/
