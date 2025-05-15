@@ -1,2 +1,2 @@
 # chat
-file:///C:/Users/Student/Desktop/chat/index.html
+https://inquisitive-cupcake-bff8b0.netlify.app/
